@@ -19,7 +19,7 @@ class MultiTenantableScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-        if (Config::get('tenant-container.enabled')) {
+        if (Config::get('tenanter.enabled')) {
 
             // if db table in context, contains tenant column, set tenant id
             if(Schema::hasColumn($model->getTable(), 'tenant_id')){
@@ -28,8 +28,8 @@ class MultiTenantableScope implements Scope
                 } else {
                     // TODO: Still need to make it better
                     // Used only once on first time seeding
-                    $model->tenant_id = Config::get('tenant-container.default_id');
-                    $tenant_id = Config::get('tenant-container.default_id');
+                    $model->tenant_id = Config::get('tenanter.default_id');
+                    $tenant_id = Config::get('tenanter.default_id');
                 }
                 $builder->where('tenant_id', $tenant_id);
             }

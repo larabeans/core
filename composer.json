@@ -1,0 +1,35 @@
+{
+    "name": "larabeans/core",
+    "description": "Apiato container to contains parent classes or common code used by all containers provided by Larabeans.",
+    "type": "apiato-container",
+    "homepage": "https://larabeans.com/",
+    "version": "0.1.0",
+    "support": {
+        "issues": "https://github.com/larabeans/core/issues",
+        "source": "https://github.com/larabeans/core"
+    },
+    "authors": [
+        {
+            "name": "Ali Kazmi",
+            "email": "ali@kazmi.me"
+        }
+    ],
+    "keywords": [
+        "apiato",
+        "larabeans core",
+        "beaner",
+        "larabeans"
+    ],
+    "license": "MIT",
+    "require": {},
+    "require-dev": {},
+    "extra": {
+        "apiato": {
+            "container": {
+                "name": "Beaner"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

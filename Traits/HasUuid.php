@@ -16,12 +16,10 @@ trait HasUuid
      */
     protected static function bootHasUuid()
     {
-        parent::boot();
-
         static::creating(function ($model) {
-            if(!$model->incrementing) {
+            if(!$model->getIncrementing()) {
                 $model->keyType = 'string';
-                //$model->incrementing = false;
+                $model->incrementing = false;
                 $model->{$model->getKeyName()} = $model->{$model->getKeyName()} ?: (string)Str::orderedUuid();
             }
         });

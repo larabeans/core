@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Vendor\Beaner\Traits;
+namespace App\Containers\Vendor\Beaner\Scopes;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;

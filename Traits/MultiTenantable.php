@@ -1,5 +1,5 @@
 <?php
-namespace App\Containers\Vendor\Beaner\Traits;
+namespace App\Containers\Vendor\Beaner\Scopes;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;

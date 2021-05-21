@@ -1,8 +1,9 @@
 <?php
-namespace App\Containers\Vendor\Beaner\Scopes;
+namespace App\Containers\Vendor\Beaner\Traits;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
+use App\Containers\Vendor\Beaner\Scopes\MultiTenantableScope;
 
 /**
  * Class HashIdTrait.

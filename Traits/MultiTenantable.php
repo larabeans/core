@@ -24,7 +24,7 @@ trait MultiTenantable {
                         } else {
                             // TODO: Still need to make it better
                             // Used only once on first time seeding
-                            $model->tenant_id = Config::get('tenanter.default_id');
+                            $model->tenant_id = config('tenanter.default_id');
                         }
                     }
                 }

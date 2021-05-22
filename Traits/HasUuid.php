@@ -16,22 +16,24 @@ trait HasUuid
      */
     protected static function bootHasUuid()
     {
-        static::creating(function ($model) {
-            if(!$model->getIncrementing()) {
-                $model->keyType = 'string';
-                $model->incrementing = false;
-                $model->{$model->getKeyName()} = $model->{$model->getKeyName()} ?: (string)Str::orderedUuid();
-            }
-        });
+        if(config('uuider.installed', false)) {
+            static::creating(function ($model) {
+                if(!$model->getIncrementing()) {
+                    $model->keyType = 'string';
+                    $model->incrementing = false;
+                    $model->{$model->getKeyName()} = $model->{$model->getKeyName()} ?: (string)Str::orderedUuid();
+                }
+            });
+        }
     }
 
     public function getIncrementing()
     {
-        return false;
+        return !config('uuider.installed', false);
     }
 
     public function getKeyType()
     {
-        return 'string';
+        return config('uuider.installed', false) ? 'string' : 'integer';
     }
 }

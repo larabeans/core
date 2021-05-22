@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Vendor\Uuider\Models;
+namespace App\Containers\Vendor\Beaner\Models;
 
 Use App\Containers\AppSection\Authorization\Models\Role as ApiatoRole;
 use App\Containers\Vendor\Beaner\Traits\HasUuid;

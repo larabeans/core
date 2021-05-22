@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Vendor\Uuider\Models;
+namespace App\Containers\Vendor\Beaner\Models;
 
 use App\Containers\AppSection\User\Models\User as ApiatoUser;
 use App\Containers\Vendor\Beaner\Traits\HasLocations;

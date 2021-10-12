@@ -1,4 +1,4 @@
->[Larabeans](README.md) > Core (Beaner)
+> [Larabeans](README.md) > Core (Beaner)
 
 ---
 
@@ -24,6 +24,7 @@
 ---
 
 ## Parents
+
 Adds parent models, extending Apiato parent models under parent namespace.
 
 - Parents/Models/Model.php
@@ -31,7 +32,9 @@ Adds parent models, extending Apiato parent models under parent namespace.
 ---
 
 ## Models
-Below models are provided as default models having modification required for UUID or tenant. You can extend these or implement you own. Don't forget to update config file accordingly.
+
+Below models are provided as default models having modification required for UUID or tenant. You can extend these or
+implement you own. Don't forget to update config file accordingly.
 
 - User.php
 - Role.php
@@ -56,4 +59,4 @@ Reusable Traits
 - MultiTenantableScope (Works along with tenanter container)
 
 ---
->[Larabeans](README.md) > Core (Beaner) [⬆](#uuider)
+> [Larabeans](README.md) > Core (Beaner) [⬆](#uuider)

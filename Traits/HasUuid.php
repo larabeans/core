@@ -16,9 +16,9 @@ trait HasUuid
      */
     protected static function bootHasUuid()
     {
-        if(config('uuider.installed', false)) {
+        if (config('uuider.installed', false)) {
             static::creating(function ($model) {
-                if(!$model->getIncrementing()) {
+                if (!$model->getIncrementing()) {
                     $model->keyType = 'string';
                     $model->incrementing = false;
                     $model->{$model->getKeyName()} = $model->{$model->getKeyName()} ?: (string)Str::orderedUuid();

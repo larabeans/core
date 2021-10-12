@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Containers\Vendor\Beaner\Traits;
 
 use Illuminate\Support\Facades\Schema;
@@ -9,11 +10,13 @@ use App\Containers\Vendor\Beaner\Scopes\MultiTenantableScope;
  *
  * @author  Syed Ali Kazmi <ali@kazmi.me>
  */
-trait MultiTenantable {
+trait MultiTenantable
+{
 
-    public static function bootMultiTenantable() {
+    public static function bootMultiTenantable()
+    {
 
-        if(config('tenanter.installed', false) && config('tenanter.enabled', false)) {
+        if (config('tenanter.installed', false) && config('tenanter.enabled', false)) {
 
             static::creating(function ($model) {
                 // if db table in context, contains tenant column, set tenant id

@@ -25,20 +25,17 @@ trait MultiTenantable
                         if (auth()->check()) {
                             $model->tenant_id = auth()->user()->tenant_id;
                         } else {
-                            // TODO: Still need to make it better
-                            // Used only once on first time seeding
-                            $model->tenant_id = config('tenanter.default_id');
+                            if(config('tenanter.default_id')){
+                                // TODO: Still need to make it better
+                                // Used only once on first time seeding
+                                $model->tenant_id = config('tenanter.default_id');
+                            }
                         }
                     }
                 }
             });
 
-            // if user is not administrator - role_id 1
-            if (auth()->check()) {
-                if (auth()->user()->role_id != 1) {
-                    static::addGlobalScope(new MultiTenantableScope);
-                }
-            }
+            static::addGlobalScope(new MultiTenantableScope);
         }
     }
 }

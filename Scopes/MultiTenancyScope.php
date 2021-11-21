@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 
-class MultiTenantableScope implements Scope
+class MultiTenancyScope implements Scope
 {
     /**
      * Apply the scope to a given Eloquent query builder.

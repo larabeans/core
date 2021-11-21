@@ -3,14 +3,14 @@
 namespace App\Containers\Vendor\Beaner\Traits;
 
 use Illuminate\Support\Facades\Schema;
-use App\Containers\Vendor\Beaner\Scopes\MultiTenantableScope;
+use App\Containers\Vendor\Beaner\Scopes\MultiTenancyScope;
 
 /**
  * Class HashIdTrait.
  *
  * @author  Syed Ali Kazmi <ali@kazmi.me>
  */
-trait MultiTenantable
+trait HasMultiTenancy
 {
 
     public static function bootMultiTenantable()
@@ -35,7 +35,7 @@ trait MultiTenantable
                 }
             });
 
-            static::addGlobalScope(new MultiTenantableScope);
+            static::addGlobalScope(new MultiTenancyScope);
         }
     }
 }

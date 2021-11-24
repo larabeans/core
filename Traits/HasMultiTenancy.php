@@ -13,7 +13,7 @@ use App\Containers\Vendor\Beaner\Scopes\MultiTenancyScope;
 trait HasMultiTenancy
 {
 
-    public static function bootMultiTenantable()
+    public static function bootHasMultiTenancy()
     {
 
         if (config('tenanter.installed', false) && config('tenanter.enabled', false)) {
@@ -35,7 +35,7 @@ trait HasMultiTenancy
                 }
             });
 
-            static::addGlobalScope(new MultiTenancyScope);
+           static::addGlobalScope(new MultiTenancyScope);
         }
     }
 }

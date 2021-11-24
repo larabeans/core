@@ -9,5 +9,4 @@ use App\Containers\Vendor\Beaner\Traits\HasMultiTenancy;
 class Permission extends ApiatoPermission
 {
     use HasUuid;
-    use HasMultiTenancy;
 }

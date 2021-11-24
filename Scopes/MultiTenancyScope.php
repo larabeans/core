@@ -24,7 +24,7 @@ class MultiTenancyScope implements Scope
             // if db table in context, contains tenant column, set tenant id
             if (Schema::hasColumn($model->getTable(), 'tenant_id')) {
                 if (auth()->check()) {
-                    if(!empty(auth()->user()->tenant_id) && !$this->gettingRolesForAuthenticatedUser($builder, $model)) {
+                    if (!empty(auth()->user()->tenant_id) && !$this->gettingRolesForAuthenticatedUser($builder, $model)) {
                         $builder->where('tenant_id', auth()->user()->tenant_id);
                     }
                 }
@@ -32,24 +32,25 @@ class MultiTenancyScope implements Scope
         }
     }
 
-    private function gettingRolesForAuthenticatedUser($builder, $model) : bool {
-
-        if($model->getTable() == 'roles') {
+    private function gettingRolesForAuthenticatedUser($builder, $model): bool
+    {
+        if ($model->getTable() == 'roles') {
             $wheres = collect($builder->getQuery()->wheres);
             if (
-                    (   $wheres->contains('column', 'model_has_roles.model_id') &&
-                        $wheres->contains('column', 'model_has_roles.model_type') &&
-                        $wheres->contains('value', 'App\Containers\Vendor\Beaner\Models\User')
-                    ) ||
-                    (
-                        $wheres->contains('column', 'id')
-                    )
+                ($wheres->contains('column', 'model_has_roles.model_id') &&
+                    $wheres->contains('column', 'model_has_roles.model_type') &&
+                    $wheres->contains('value', 'App\Containers\Vendor\Beaner\Models\User')
+                ) ||
+                (
+                $wheres->contains('column', 'role_has_permissions.permission_id')
+                ) ||
+                (
+                $wheres->contains('column', 'id')
+                )
             ) {
-                //dd('true');
                 return true;
             }
         }
-        //dd('false');
         return false;
     }
 }

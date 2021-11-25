@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Vendor\Configurationer\Traits;
+namespace App\Containers\Vendor\Beaner\Traits;
 
 use Illuminate\Support\Facades\Auth;
 

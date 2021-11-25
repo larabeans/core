@@ -28,6 +28,12 @@ class MultiTenancyScope implements Scope
                         $builder->where('tenant_id', auth()->user()->tenant_id);
                     }
                 }
+            } else if ($model->getTable() == 'tenants') {
+                if (auth()->check()) {
+                    if (!empty(auth()->user()->tenant_id) && !$this->gettingRolesForAuthenticatedUser($builder, $model)) {
+                        $builder->where('id', auth()->user()->tenant_id);
+                    }
+                }
             }
         }
     }

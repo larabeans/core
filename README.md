@@ -57,6 +57,8 @@ Reusable Traits
 ## Scopes
 
 - MultiTenantableScope (Works along with tenanter container)
+- Update CreateRoleRequest file to change [ 'name' => 'required|unique:' . config('permission.table_names.roles') . ',
+  name|min:2|max:20|no_spaces' ] to [ 'name' => 'required|min:2|max:20|no_spaces' ]
 
 ---
 > [Larabeans](README.md) > Core (Beaner) [⬆](#uuider)

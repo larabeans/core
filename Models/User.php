@@ -6,12 +6,12 @@ use App\Containers\AppSection\User\Models\User as ApiatoUser;
 use App\Containers\Vendor\Beaner\Traits\HasLocations;
 use App\Containers\Vendor\Beaner\Traits\HasMobileLocation;
 use App\Containers\Vendor\Beaner\Traits\HasUuid;
-use App\Containers\Vendor\Beaner\Traits\HasMultiTenancy;
+use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
 
 class User extends ApiatoUser
 {
     use HasUuid;
-    use HasMultiTenancy;
+    use HasTenancy;
     use HasLocations;
     use HasMobileLocation;
 

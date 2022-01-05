@@ -3,9 +3,11 @@
 namespace App\Containers\Vendor\Beaner\Models;
 
 use App\Containers\AppSection\User\Models\User as ApiatoUser;
+use App\Containers\Vendor\Beaner\Events\UserCreated;
 use App\Containers\Vendor\Beaner\Traits\HasLocations;
 use App\Containers\Vendor\Beaner\Traits\HasMobileLocation;
 use App\Containers\Vendor\Beaner\Traits\HasUuid;
+use App\Containers\Vendor\Beaner\Events;
 use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
 
 class User extends ApiatoUser
@@ -35,5 +37,9 @@ class User extends ApiatoUser
         'email_verified_at',
         'is_admin',
         'tenant_id'
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => Events\UserCreated::class
     ];
 }

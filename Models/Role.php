@@ -10,4 +10,13 @@ class Role extends ApiatoRole
 {
     use HasUuid;
     use HasTenancy;
+
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'display_name',
+        'description',
+        'level',
+        'tenant_id'
+    ];
 }

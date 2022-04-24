@@ -4,17 +4,17 @@ namespace App\Containers\Vendor\Beaner\Models;
 
 use App\Containers\AppSection\User\Models\User as ApiatoUser;
 use App\Containers\Vendor\Beaner\Events;
-use App\Containers\Vendor\Uuider\Traits\HasUuid;
-use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
-use App\Containers\Vendor\Tenanter\Traits\AuthenticationTrait;
-use App\Containers\Vendor\Locationer\Traits\HasLocations;
+// use App\Containers\Vendor\Uuider\Traits\HasUuid;
+// use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
+// use App\Containers\Vendor\Tenanter\Traits\AuthenticationTrait;
+// use App\Containers\Vendor\Locationer\Traits\HasLocations;
 
 class User extends ApiatoUser
 {
-    use HasUuid;
-    use HasTenancy;
-    use AuthenticationTrait;
-    use HasLocations;
+    // use HasUuid;
+    // use HasTenancy;
+    // use AuthenticationTrait;
+    // use HasLocations;
 
     protected $fillable = [
         'name',

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Containers\Vendor\Beaner\Models;
+namespace App\Containers\Larabeans\Beaner\Models;
 
 use App\Containers\AppSection\User\Models\User as ApiatoUser;
-use App\Containers\Vendor\Beaner\Events;
+use App\Containers\Larabeans\Beaner\Events;
 // use App\Containers\Vendor\Uuider\Traits\HasUuid;
 // use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
 // use App\Containers\Vendor\Tenanter\Traits\AuthenticationTrait;

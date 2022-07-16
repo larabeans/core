@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Vendor\Beaner\Parents\Models;
+namespace App\Containers\Larabeans\Beaner\Parents\Models;
 
 use App\Ship\Parents\Models\Model as ApiatoParentModel;
 // use App\Containers\Vendor\Uuider\Traits\HasUuid;

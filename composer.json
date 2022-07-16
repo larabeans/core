@@ -1,7 +1,7 @@
 {
     "name": "larabeans/core",
     "description": "Apiato container to contains parent classes or common code used by all containers provided by Larabeans.",
-    "type": "apiato-container",
+    "type": "larabeans-container",
     "homepage": "https://larabeans.com/",
     "version": "0.1.0",
     "support": {
@@ -26,6 +26,7 @@
     "extra": {
         "apiato": {
             "container": {
+                "section": "Larabeans",
                 "name": "Beaner"
             }
         }

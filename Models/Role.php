@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Larabeans\Beaner\Models;
+namespace App\Containers\Larabeans\Core\Models;
 
 use App\Containers\AppSection\Authorization\Models\Role as ApiatoRole;
 // use App\Containers\Larabeans\Uuider\Traits\HasUuid;

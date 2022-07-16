@@ -27,7 +27,7 @@
         "apiato": {
             "container": {
                 "section": "Larabeans",
-                "name": "Beaner"
+                "name": "Core"
             }
         }
     },

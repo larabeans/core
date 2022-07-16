@@ -4,10 +4,10 @@ namespace App\Containers\Larabeans\Beaner\Models;
 
 use App\Containers\AppSection\User\Models\User as ApiatoUser;
 use App\Containers\Larabeans\Beaner\Events;
-// use App\Containers\Vendor\Uuider\Traits\HasUuid;
-// use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
-// use App\Containers\Vendor\Tenanter\Traits\AuthenticationTrait;
-// use App\Containers\Vendor\Locationer\Traits\HasLocations;
+// use App\Containers\Larabeans\Uuider\Traits\HasUuid;
+// use App\Containers\Larabeans\Tenanter\Models\Concerns\HasTenancy;
+// use App\Containers\Larabeans\Tenanter\Traits\AuthenticationTrait;
+// use App\Containers\Larabeans\Locationer\Traits\HasLocations;
 
 class User extends ApiatoUser
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Containers\Vendor\Beaner\Models;
+namespace App\Containers\Larabeans\Core\Models;
 
 use App\Containers\AppSection\Authorization\Models\Role as ApiatoRole;
-// use App\Containers\Vendor\Uuider\Traits\HasUuid;
-// use App\Containers\Vendor\Tenanter\Models\Concerns\HasTenancy;
+// use App\Containers\Larabeans\Uuider\Traits\HasUuid;
+// use App\Containers\Larabeans\Tenanter\Models\Concerns\HasTenancy;
 
 class Role extends ApiatoRole
 {

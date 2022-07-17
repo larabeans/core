@@ -4,10 +4,10 @@ return [
 
     'models' => [
 
-        'user' => \App\Containers\Vendor\Beaner\Models\User::class,
+        'user' => \App\Containers\Larabeans\Core\Models\User::class,
 
-        'permission' => \App\Containers\Vendor\Beaner\Models\Permission::class,
+        'permission' => \App\Containers\Larabeans\Core\Models\Permission::class,
 
-        'role' => \App\Containers\Vendor\Beaner\Models\Role::class
+        'role' => \App\Containers\Larabeans\Core\Models\Role::class
     ],
 ];

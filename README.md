@@ -1,8 +1,8 @@
-> [Larabeans](README.md) > Core (Beaner)
+> [Larabeans](README.md) > Core
 
 ---
 
-# Core (Beaner)
+# Core
 
 > APIATO container that contains parent classes or common code used by all containers provided by Larabeans.
 
@@ -36,10 +36,10 @@ Adds parent models, extending Apiato parent models under parent namespace.
 Below models are provided as default models having modification required for UUID or tenant. You can extend these or
 implement you own. Don't forget to update config file accordingly.
 
-- Beaner/Models/User.php
-- Beaner/Models/Role.php
-- Beaner/Models/Permission.php
-- Beaner/Parents/Models/Model.php
+- Core/Models/User.php
+- Core/Models/Role.php
+- Core/Models/Permission.php
+- Core/Parents/Models/Model.php
 
 
 Note: Above model uses below listed traits, and these are commented by default, before proceeding to data migration, 
@@ -65,4 +65,4 @@ Reusable Traits
 - Update CreateRoleRequest file to remove unique name rule and add ( 'name' => 'required|min:2|max:20|no_spaces' )
 
 ---
-> [Larabeans](README.md) > Core (Beaner) [⬆](#uuider)
+> [Larabeans](README.md) > Core [⬆](#uuider)

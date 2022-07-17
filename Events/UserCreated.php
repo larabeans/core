@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\Vendor\Beaner\Events;
+namespace App\Containers\Larabeans\Core\Events;
 
-use App\Containers\Vendor\Beaner\Models\User;
+use App\Containers\Larabeans\Core\Models\User;
 use App\Ship\Parents\Events\Event;
 
 class UserCreated extends Event

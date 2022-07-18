@@ -17,11 +17,13 @@
     "keywords": [
         "apiato",
         "larabeans core",
-        "beaner",
+        "core",
         "larabeans"
     ],
     "license": "MIT",
-    "require": {},
+    "require": {
+        "larabeans/container-installer": "1.0.0"
+    },
     "require-dev": {},
     "extra": {
         "apiato": {
